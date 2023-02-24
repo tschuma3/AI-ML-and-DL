@@ -27,7 +27,7 @@ public class Test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float rotation_Input = Input.GetAxis("Rotate");
+        float rotation_Input = Input.GetAxis("Horizontal");
         if (rotation_Input != 0 ) 
         {
             float rotation_Amount = rotation * Time.deltaTime;
@@ -39,9 +39,9 @@ public class Test : MonoBehaviour
 
             transform.Rotate(Vector3.forward, rotation_Amount);
             
-            float zRotation = transform.eulerAngles.z * Mathf.Deg2Rad;
+            float zRotation = transform.eulerAngles.y * Mathf.Deg2Rad;
             velocity.x = Mathf.Cos(zRotation);
-            velocity.y = Mathf.Sin(zRotation);
+            velocity.z = Mathf.Sin(zRotation);
         }
     }
 
