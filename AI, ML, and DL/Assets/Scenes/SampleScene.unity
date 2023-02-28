@@ -337,7 +337,7 @@ MonoBehaviour:
   position: {x: 0, y: 0, z: 0}
   speed: 5
   acceleration: 5
-  rotation: 180
+  rotation: 0
 --- !u!54 &608895895
 Rigidbody:
   m_ObjectHideFlags: 0
